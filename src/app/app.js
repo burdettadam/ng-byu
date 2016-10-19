@@ -10,15 +10,11 @@ let app = () => {
   }
 };
 
-class AppCtrl {
-  constructor() {
-    this.url = 'https://github.com/preboot/angular-webpack';
-  }
+let AppCtrl = ($scope) => {
+  $scope.url = 'https://github.com/preboot/angular-webpack';
 }
 
-const MODULE_NAME = 'app';
-
-angular.module(MODULE_NAME, [])
+angular.module('byu', [])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 
